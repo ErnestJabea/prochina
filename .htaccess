@@ -8,16 +8,37 @@ Options -Indexes
 # Set UTF-8 Default Encoding
 AddDefaultCharset UTF-8
 
-# Protect Sensitive System Files
-<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|md|js\.map|json)$">
-    Order allow,deny
-    Deny from all
+# Allow Public Access to Static Web Assets
+<FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
 </FilesMatch>
 
-# Prevent Direct Access to Internal Script/Template Files
+# Protect Sensitive System Files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|md|js\.map|json)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Prevent Direct Access to Internal Utility Scripts
 <FilesMatch "(validate_site|fix_png|embed_logo|copy_assets)\.js$">
-    Order allow,deny
-    Deny from all
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
 # Enable Rewrite Engine for SSL & Security
