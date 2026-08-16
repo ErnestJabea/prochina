@@ -1,0 +1,13 @@
+# Logs
+*.log
+quote_requests.log
+
+# Scratch / Temporary files
+/scratch/
+scratchpad_*.md
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

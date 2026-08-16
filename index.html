@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRO CHINA LINK - Votre passerelle directe vers les usines chinoises</title>
+  <meta name="description"
+    content="Importez en toute confiance depuis la Chine vers le Cameroun et l'Afrique Centrale. Accès direct prix usine, transactions 100% sécurisées (30%/70%) et livraison rapide.">
+  <meta name="theme-color" content="#12182B">
+
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:title" content="PRO CHINA LINK - Sourcing & Import Chine-Afrique">
+  <meta property="og:description"
+    content="Votre passerelle directe vers les usines chinoises. Gagnez du temps, sécurisez vos approvisionnements.">
+  <meta property="og:type" content="website">
+
+  <!-- Security Headers & reCAPTCHA v3 -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+
+  <!-- Google reCAPTCHA API Script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header / Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo-brand" aria-label="Accueil PRO CHINA LINK">
+        <img src="assets/images/logo.png" alt="PRO CHINA LINK Logo" class="logo-img">
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Navigation principale">
+        <a href="#hero" class="nav-link active" data-i18n="nav_home">Accueil</a>
+        <a href="#a-propos" class="nav-link" data-i18n="nav_about">À propos</a>
+        <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+        <a href="#temoignages" class="nav-link" data-i18n="nav_testimonials">Témoignages</a>
+        <a href="#cotation" class="nav-link" data-i18n="nav_quotation">Cotation</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="true">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+            </svg>
+            <span id="currentLangLabel">Français</span>
+            <svg style="width:12px;height:12px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-item" data-lang="fr">🇫🇷 Français</div>
+            <div class="lang-item" data-lang="en">🇬🇧 English</div>
+          </div>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu Mobile">
+          <svg style="width:28px;height:28px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal reveal-up">
+          <span class="hero-badge-dot"></span>
+          <span data-i18n="hero_badge">Passerelle Directe Chine ➔ Cameroun & Afrique</span>
+        </div>
+        <h1 class="hero-title reveal reveal-up delay-100" data-i18n="hero_title">
+          PRO CHINA LINK Votre passerelle directe vers les <span>usines chinoises</span>
+        </h1>
+        <p class="hero-subtitle reveal reveal-up delay-200" data-i18n="hero_subtitle">
+          Importez en toute confiance depuis la Chine vers le Cameroun et l'Afrique.
+        </p>
+        <p class="hero-tagline reveal reveal-up delay-200" data-i18n="hero_tagline">
+          Gagnez du temps, sécurisez vos approvisionnements.
+        </p>
+
+        <div class="hero-cta-group reveal reveal-up delay-300">
+          <a href="#cotation" class="btn btn-red">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span data-i18n="btn_request_quote">Demander une cotation</span>
+          </a>
+          <a href="#services" class="btn btn-outline-white" data-i18n="btn_discover_solutions">
+            Découvrir nos solutions
+          </a>
+        </div>
+
+        <!-- Quick Stats Bar -->
+        <div class="hero-stats reveal reveal-scale delay-400">
+          <div class="stat-item">
+            <div class="stat-number">+500<span>+</span></div>
+            <div class="stat-label" data-i18n="stat1_label">Conteneurs Livrés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100<span>%</span></div>
+            <div class="stat-label" data-i18n="stat2_label">Sécurité Paiement</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24<span>h</span></div>
+            <div class="stat-label" data-i18n="stat3_label">Cotation Express</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">+150<span>+</span></div>
+            <div class="stat-label" data-i18n="stat4_label">Usines Partenaires</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Notre Mission Section
+       ========================================================================== -->
+  <section class="mission-section" id="a-propos">
+    <div class="container">
+      <div class="mission-grid">
+        <!-- Left Dark Block -->
+        <div class="mission-left reveal reveal-left">
+          <h2 class="mission-left-title" data-i18n="mission_title">NOTRE MISSION</h2>
+          <p class="mission-left-text" data-i18n="mission_subtitle">
+            Simplifier l'importation pour les entreprises africaines.
+          </p>
+        </div>
+
+        <!-- Right White Block -->
+        <div class="mission-right reveal reveal-right delay-200">
+          <p class="mission-p" data-i18n="mission_p1">
+            <strong>PRO CHINA LINK</strong> est une structure spécialisée dans l'importation entre la Chine et l'Afrique
+            Centrale. Nous accompagnons grossistes, commerçants, détaillants et porteurs de projet à l'achat et à la
+            livraison de marchandises de qualités de leurs choix.
+          </p>
+          <p class="mission-p" data-i18n="mission_p2">
+            Grâce à notre réseau d'usines fiables, nous garantissons un excellent rapport qualité-prix, une transaction
+            sécurisée et un suivi rigoureux.
+          </p>
+          <div class="mission-features">
+            <span class="mission-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span data-i18n="pill_sourcing">Sourcing Usine Direct</span>
+            </span>
+            <span class="mission-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span data-i18n="pill_quality">Inspection Qualité Strict</span>
+            </span>
+            <span class="mission-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span data-i18n="pill_freight">Suivi Fret & Douane</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Pourquoi Nous Choisir ? Section
+       ========================================================================== -->
+  <section class="why-us-section">
+    <div class="container">
+      <h2 class="section-title reveal reveal-up" data-i18n="why_title">POURQUOI NOUS CHOISIR ?</h2>
+
+      <div class="why-grid">
+        <!-- Card 1 -->
+        <div class="why-card reveal reveal-scale delay-100">
+          <div class="why-icon-box">
+            <!-- Factory Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M2 20h20" />
+              <path d="M6 20V10l6 4V10l6 4v6" />
+              <path d="M18 10V4h2v6" />
+              <path d="M4 14h2" />
+              <path d="M4 17h2" />
+            </svg>
+          </div>
+          <h3 class="why-card-title" data-i18n="why1_title">Accès direct aux prix usine</h3>
+          <p class="why-card-desc" data-i18n="why1_desc">
+            Négociation directe avec les manufacturiers chinois pour les meilleurs tarifs.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-card reveal reveal-scale delay-200">
+          <div class="why-icon-box">
+            <!-- Handshake Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
+              <path d="m7 21 1.6-1.4c.4-.4.4-1 0-1.4l-2.2-2.2c-.4-.4-1-.4-1.4 0L2 19" />
+              <path d="M13 15h3c.6 0 1.1-.2 1.4-.6L21 10" />
+              <path d="M18 4a3 3 0 0 0-3 3v2" />
+            </svg>
+          </div>
+          <h3 class="why-card-title" data-i18n="why2_title">Accompagnement personnalisé</h3>
+          <p class="why-card-desc" data-i18n="why2_desc">
+            Suivi sur mesure accordé à chaque étape de votre projet d'import.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-card reveal reveal-scale delay-300">
+          <div class="why-icon-box">
+            <!-- Credit Card & Lock Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="5" rx="2" />
+              <line x1="2" x2="22" y1="10" y2="10" />
+              <rect x="14" y="13" width="5" height="4" rx="1" />
+            </svg>
+          </div>
+          <h3 class="why-card-title" data-i18n="why3_title">Paiement sécurisé en deux étapes</h3>
+          <p class="why-card-desc" data-i18n="why3_desc">
+            30% à la commande, 70% à la livraison après contrôle sécurité.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="why-card reveal reveal-scale delay-400">
+          <div class="why-icon-box">
+            <!-- Delivery Truck Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+              <path d="M15 18h4.5a2.5 2.5 0 0 0 2.5-2.5V12l-3-4h-4v10" />
+              <circle cx="7" cy="18" r="2" />
+              <circle cx="17" cy="18" r="2" />
+            </svg>
+          </div>
+          <h3 class="why-card-title" data-i18n="why4_title">Livraison fiable en Afrique Centrale</h3>
+          <p class="why-card-desc" data-i18n="why4_desc">
+            Réseau logistique éprouvé pour une livraison rapide et sûre.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Des solutions adaptées à chaque type de client Section
+       ========================================================================== -->
+  <section class="solutions-section" id="services">
+    <div class="container">
+      <h2 class="section-title reveal reveal-up" data-i18n="solutions_title">Des solutions adaptées à chaque type de
+        client</h2>
+
+      <div class="solutions-grid">
+        <!-- Solution 1: Grossistes -->
+        <div class="solution-card reveal reveal-up delay-100">
+          <div class="solution-icon">
+            <!-- Shield Hexagon Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="solution-title" data-i18n="sol1_title">Grossistes</h3>
+          <p class="solution-desc" data-i18n="sol1_desc">
+            Commandes en grande quantité avec les meilleures réductions. Accès direct aux fabricants et gestion du fret
+            complet pour maximiser la rentabilité commerciale.
+          </p>
+          <a href="#cotation" onclick="selectClientType('Grossiste')" class="solution-action">
+            <span data-i18n="select_offer">Sélectionner cette offre</span>
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Solution 2: Détaillants -->
+        <div class="solution-card reveal reveal-up delay-200">
+          <div class="solution-icon">
+            <!-- Shopping Box Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+          </div>
+          <h3 class="solution-title" data-i18n="sol2_title">Détaillants</h3>
+          <p class="solution-desc" data-i18n="sol2_desc">
+            Solutions de petits et moyens volumes adaptées. Groupage des marchandises pour réduire les coûts et
+            sécuriser la provenance.
+          </p>
+          <a href="#cotation" onclick="selectClientType('Détaillant')" class="solution-action">
+            <span data-i18n="select_offer">Sélectionner cette offre</span>
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Solution 3: Startups -->
+        <div class="solution-card reveal reveal-up delay-300">
+          <div class="solution-icon">
+            <!-- Rocket Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71 1.26-1.5 1.26-1.5l-4.26-4.26s-.79.55-1.5 1.26z" />
+              <path d="M12 15l-3-3 7.35-7.35c.9-.9 2.36-.9 3.26 0 .9.9.9 2.36 0 3.26L12 15z" />
+              <path d="M15 9l-3-3" />
+            </svg>
+          </div>
+          <h3 class="solution-title" data-i18n="sol3_title">Startups</h3>
+          <p class="solution-desc" data-i18n="sol3_desc">
+            Accompagnement sur-mesure pour votre premier import. Conseil produit, recherche des usines sûres et support
+            complet pour lancer votre projet.
+          </p>
+          <a href="#cotation" onclick="selectClientType('Startup')" class="solution-action">
+            <span data-i18n="select_offer">Sélectionner cette offre</span>
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Comment Ça Marche ? Section
+       ========================================================================== -->
+  <section class="how-section">
+    <div class="container">
+      <h2 class="section-title reveal reveal-up" data-i18n="how_title">COMMENT ÇA MARCHE ?</h2>
+
+      <div class="steps-container">
+        <!-- Step 1 -->
+        <div class="step-card reveal reveal-up delay-100">
+          <div class="step-circle">
+            <span class="step-number">1</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+            </div>
+          </div>
+          <p class="step-label" data-i18n="step1_label">Le client exprime son besoin</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card reveal reveal-up delay-200">
+          <div class="step-circle">
+            <span class="step-number">2</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <line x1="7" y1="8" x2="17" y2="8" />
+                <line x1="7" y1="12" x2="17" y2="12" />
+                <line x1="7" y1="16" x2="13" y2="16" />
+              </svg>
+            </div>
+          </div>
+          <p class="step-label" data-i18n="step2_label">Nous envoyons une cotation détaillée</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card reveal reveal-up delay-300">
+          <div class="step-circle">
+            <span class="step-number">3</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+          </div>
+          <p class="step-label" data-i18n="step3_label">Paiement d'un acompte de 30%</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card reveal reveal-up delay-400">
+          <div class="step-circle">
+            <span class="step-number">4</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+          </div>
+          <p class="step-label" data-i18n="step4_label">Livraison au Cameroun</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card reveal reveal-up delay-500">
+          <div class="step-circle">
+            <span class="step-number">5</span>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+          </div>
+          <p class="step-label" data-i18n="step5_label">Paiement du solde de 70% à réception</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Obtenez votre cotation personnalisée Section (Contact & Form)
+       ========================================================================== -->
+  <section class="contact-section" id="cotation">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left Dark Panel -->
+        <div class="contact-info-panel reveal reveal-left">
+          <div>
+            <h2 class="contact-info-title" data-i18n="form_title">Obtenez votre cotation personnalisée</h2>
+            <p class="contact-info-subtitle" data-i18n="form_subtitle">
+              Remplissez le formulaire ci-contre et recevez votre devis détaillé sous 24h.
+            </p>
+
+            <!-- Office 1: Chine -->
+            <div class="office-block">
+              <h3 class="office-country" data-i18n="office_china_title">
+                🇨🇳 Chine (Guangzhou)
+              </h3>
+              <div class="office-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>Tél : +86 133 7700 3859</span>
+              </div>
+              <div class="office-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span data-i18n="office_china_loc">Localisation : Room 1102, 11t Floor N° 2022-3 Huanshi West Road,
+                  YueXiu District Guangzhou City</span>
+              </div>
+            </div>
+
+            <!-- Office 2: Cameroun -->
+            <div class="office-block">
+              <h3 class="office-country" data-i18n="office_cmr_title">
+                🇨🇲 Cameroun (Douala & Yaoundé)
+              </h3>
+              <div class="office-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>Tél : +237 683 320 588</span>
+              </div>
+              <div class="office-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span data-i18n="office_cmr_loc">Localisation : 70 EasyOffices, Centre International de l'Artisanat,
+                  Carrefour Intendance Yaoundé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form Panel -->
+        <div class="contact-form-panel reveal reveal-right delay-200">
+          <form id="quoteForm" action="send_mail.php" method="POST">
+            <input type="hidden" name="_to" value="prochinalink@gmail.com">
+            <input type="hidden" name="_subject" value="[PRO CHINA LINK] Nouvelle demande de cotation">
+            
+            <!-- Anti-Spam Security: Invisible Honeypot Field -->
+            <div style="display:none !important; visibility:hidden !important; opacity:0 !important; position:absolute !important; left:-9999px !important;" aria-hidden="true">
+              <input type="text" name="website_hp_check" id="website_hp_check" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Anti-Spam Security: Google reCAPTCHA v3 Token -->
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="clientName" data-i18n="label_fullname">Nom complet *</label>
+                <input type="text" id="clientName" name="name" class="form-control" data-i18n-ph="ph_fullname"
+                  placeholder="Ex: Jean Dupont" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="clientEmail" data-i18n="label_email">Email *</label>
+                <input type="email" id="clientEmail" name="email" class="form-control" data-i18n-ph="ph_email"
+                  placeholder="exemple@domaine.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="clientPhone" data-i18n="label_phone">Téléphone *</label>
+                <input type="tel" id="clientPhone" name="phone" class="form-control"
+                  placeholder="6 90 00 00 00" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="productType" data-i18n="label_product">Type de produit recherché</label>
+                <input type="text" id="productType" name="product_type" class="form-control" data-i18n-ph="ph_product"
+                  placeholder="Ex: Électronique, Textile, Machines...">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="productQty" data-i18n="label_qty">Quantité désirée</label>
+                <input type="text" id="productQty" name="product_qty" class="form-control" data-i18n-ph="ph_qty"
+                  placeholder="Ex: 500 pièces, 1 conteneur 20ft...">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="destination" data-i18n="label_destination">Pays / Ville d'arrivée</label>
+                <input type="text" id="destination" name="destination" class="form-control"
+                  data-i18n-ph="ph_destination" placeholder="Ex: Douala, Cameroun">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="clientMessage" data-i18n="label_message">Message / Spécifications de vos
+                produits</label>
+              <textarea id="clientMessage" name="message" class="form-control" data-i18n-ph="ph_message"
+                placeholder="Décrivez votre besoin en détail..."></textarea>
+            </div>
+
+            <!-- Anti-Spam Security: Google reCAPTCHA Box & Interactive Robot Verification -->
+            <div class="form-group recaptcha-group">
+              <!-- Official Google reCAPTCHA v2 Widget (Insérer votre vraie Clé de site Google reCAPTCHA ici) -->
+              <!-- <div class="g-recaptcha" data-sitekey="VOTRE_CLE_DE_SITE_GOOGLE_ICI" data-theme="light"></div> -->
+
+              <!-- Ergonomic Fallback Checkbox CAPTCHA Widget -->
+              <div class="captcha-box" id="captchaBox">
+                <label class="captcha-label">
+                  <input type="checkbox" id="humanCheck" name="human_check" class="captcha-checkbox">
+                  <span class="custom-checkbox"></span>
+                  <span class="captcha-text" data-i18n="captcha_robot_text">Je ne suis pas un robot</span>
+                </label>
+                <div class="captcha-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;color:#10B981;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                  <span class="captcha-brand-text">reCAPTCHA</span>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="padding:1rem;">
+              <span data-i18n="btn_submit_form">Envoyer ma demande de cotation</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Témoignages Section
+       ========================================================================== -->
+  <section class="testimonials-section" id="temoignages">
+    <div class="container">
+      <h2 class="section-title reveal reveal-up" data-i18n="testimonials_title">TÉMOIGNAGES CLIENTS</h2>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card reveal reveal-scale delay-100">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-text" data-i18n="t1_text">
+            "Grâce à PRO CHINA LINK, j'ai pu lancer mon activité de vente de téléphones avec des marges intéressantes.
+            Service professionnel et accompagnement de qualité."
+          </p>
+          <div class="testimonial-author" data-i18n="t1_author">
+            Jean, Douala
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card reveal reveal-scale delay-200">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-text" data-i18n="t2_text">
+            "Service rapide et transparent. Les prix d'usine sont réellement respectés. Je recommande vivement pour tous
+            vos projets d'import depuis la Chine."
+          </p>
+          <div class="testimonial-author" data-i18n="t2_author">
+            Amina, Yaoundé
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card reveal reveal-scale delay-300">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-text" data-i18n="t3_text">
+            "Excellent accompagnement pour ma startup. PRO CHINA LINK m'a aidé à trouver les meilleurs fournisseurs
+            d'équipements industriels en Chine."
+          </p>
+          <div class="testimonial-author" data-i18n="t3_author">
+            Paul, Bafoussam
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo-brand" aria-label="Accueil PRO CHINA LINK">
+          <img src="assets/images/logo.png" alt="PRO CHINA LINK Logo" class="footer-logo-img">
+        </a>
+      </div>
+      <p class="footer-text" data-i18n="footer_copyright">
+        © 2026 PRO CHINA LINK. Tous droits réservés. Votre passerelle directe vers les usines chinoises.
+      </p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Quick Contact Button -->
+  <a href="https://wa.me/237683320588?text=Bonjour%20Pro%20China%20Link,%20je%20souhaite%20obtenir%20une%20cotation."
+    target="_blank" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12.031 2c-5.517 0-9.993 4.476-9.993 9.993 0 1.763.459 3.479 1.33 4.996l-1.415 5.166 5.286-1.385c1.47.801 3.13 1.22 4.792 1.22h.004c5.517 0 9.993-4.476 9.993-9.993s-4.476-9.997-9.997-9.997zm0 18.29h-.003c-1.492 0-2.955-.401-4.232-1.159l-.303-.18-3.142.824.838-3.064-.198-.315c-.833-1.325-1.273-2.863-1.273-4.437 0-4.606 3.747-8.353 8.353-8.353 4.606 0 8.353 3.747 8.353 8.353 0 4.606-3.747 8.353-8.39 8.353zm4.582-6.257c-.251-.126-1.488-.734-1.718-.818-.23-.084-.398-.126-.566.126-.168.251-.649.818-.795.986-.146.168-.293.188-.544.063-.251-.126-1.06-.391-2.019-1.246-.746-.665-1.25-1.486-1.396-1.737-.146-.251-.016-.387.11-.512.113-.113.251-.293.377-.44.126-.146.168-.251.251-.419.084-.168.042-.314-.021-.44-.063-.126-.566-1.362-.776-1.865-.205-.492-.413-.425-.566-.433-.146-.008-.314-.008-.482-.008-.168 0-.44.063-.67.314-.23.251-.879.859-.879 2.096 0 1.237.9 2.431 1.026 2.6.126.168 1.77 2.703 4.288 3.791.599.259 1.067.414 1.431.53.602.191 1.15.164 1.583.1.483-.072 1.488-.608 1.697-1.194.209-.586.209-1.089.146-1.194-.062-.105-.23-.168-.481-.294z" />
+    </svg>
+  </a>
+
+  <!-- intl-tel-input JS -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+
+  <!-- JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
