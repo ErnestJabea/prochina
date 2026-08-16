@@ -1,17 +1,12 @@
 # ==============================================================================
-# PRO CHINA LINK - Production Apache Server Security Configuration (.htaccess)
+# PRO CHINA LINK - Ultra-Compatible Apache Configuration (.htaccess)
 # ==============================================================================
-
-# Disable Directory Browsing safely
-<IfModule mod_autoindex.c>
-    Options -Indexes
-</IfModule>
 
 # Set UTF-8 Default Encoding
 AddDefaultCharset UTF-8
 
-# Explicitly Allow Direct Public Access to Images & Media Assets
-<FilesMatch "\.(png|jpg|jpeg|gif|ico|svg|webp|css|js|woff|woff2|ttf|eot)$">
+# Explicitly Allow All Access to Public Static Files (Images, CSS, JS)
+<FilesMatch "\.(png|jpg|jpeg|gif|ico|svg|webp|css|js|woff|woff2|ttf|eot|html|php)$">
     <IfModule mod_authz_core.c>
         Require all granted
     </IfModule>
@@ -21,8 +16,8 @@ AddDefaultCharset UTF-8
     </IfModule>
 </FilesMatch>
 
-# Protect Sensitive System & Config Files
-<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|md|js\.map|json)$">
+# Protect Hidden Files (e.g. .env, .git)
+<FilesMatch "^\.">
     <IfModule mod_authz_core.c>
         Require all denied
     </IfModule>
@@ -31,29 +26,3 @@ AddDefaultCharset UTF-8
         Deny from all
     </IfModule>
 </FilesMatch>
-
-# Prevent Direct Access to Build/Utility Scripts
-<FilesMatch "(validate_site|fix_png|embed_logo|copy_assets)\.js$">
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-    <IfModule !mod_authz_core.c>
-        Order allow,deny
-        Deny from all
-    </IfModule>
-</FilesMatch>
-
-# Security HTTP Headers
-<IfModule mod_headers.c>
-    # Allow framing on same origin
-    Header always set X-Frame-Options "SAMEORIGIN"
-
-    # Prevent MIME Sniffing
-    Header always set X-Content-Type-Options "nosniff"
-
-    # Enable XSS Filter
-    Header always set X-XSS-Protection "1; mode=block"
-
-    # Referrer Policy
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-</IfModule>
