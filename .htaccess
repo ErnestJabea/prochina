@@ -2,14 +2,16 @@
 # PRO CHINA LINK - Production Apache Server Security Configuration (.htaccess)
 # ==============================================================================
 
-# Disable Directory Browsing
-Options -Indexes
+# Disable Directory Browsing safely
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
 
 # Set UTF-8 Default Encoding
 AddDefaultCharset UTF-8
 
-# Allow Public Access to Static Web Assets
-<FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot)$">
+# Explicitly Allow Direct Public Access to Images & Media Assets
+<FilesMatch "\.(png|jpg|jpeg|gif|ico|svg|webp|css|js|woff|woff2|ttf|eot)$">
     <IfModule mod_authz_core.c>
         Require all granted
     </IfModule>
@@ -19,7 +21,7 @@ AddDefaultCharset UTF-8
     </IfModule>
 </FilesMatch>
 
-# Protect Sensitive System Files
+# Protect Sensitive System & Config Files
 <FilesMatch "\.(htaccess|htpasswd|ini|log|sh|md|js\.map|json)$">
     <IfModule mod_authz_core.c>
         Require all denied
@@ -30,7 +32,7 @@ AddDefaultCharset UTF-8
     </IfModule>
 </FilesMatch>
 
-# Prevent Direct Access to Internal Utility Scripts
+# Prevent Direct Access to Build/Utility Scripts
 <FilesMatch "(validate_site|fix_png|embed_logo|copy_assets)\.js$">
     <IfModule mod_authz_core.c>
         Require all denied
@@ -41,19 +43,10 @@ AddDefaultCharset UTF-8
     </IfModule>
 </FilesMatch>
 
-# Enable Rewrite Engine for SSL & Security
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    
-    # Force HTTPS (Uncomment on production SSL server)
-    # RewriteCond %{HTTPS} off
-    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-
 # Security HTTP Headers
 <IfModule mod_headers.c>
-    # Prevent Clickjacking
-    Header always set X-Frame-Options "DENY"
+    # Allow framing on same origin
+    Header always set X-Frame-Options "SAMEORIGIN"
 
     # Prevent MIME Sniffing
     Header always set X-Content-Type-Options "nosniff"
@@ -63,10 +56,4 @@ AddDefaultCharset UTF-8
 
     # Referrer Policy
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-    # Permissions Policy
-    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-
-    # HTTP Strict Transport Security (HSTS)
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
